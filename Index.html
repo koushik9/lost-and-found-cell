@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#102b46">
+
+    <title>Lost & Found Cell | Morigaon College</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">⌕</div>
+
+            <div class="brand-text">
+                <h1>MORIGAON COLLEGE</h1>
+                <p>LOST & FOUND CELL</p>
+            </div>
+
+        </a>
+
+        <div class="header-badge">
+            <span class="online-dot"></span>
+            STUDENT PORTAL
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    MORIGAON COLLEGE (AUTONOMOUS)
+                </span>
+
+                <h2>
+                    Lost something?<br>
+                    <span>Let's find it together.</span>
+                </h2>
+
+                <p>
+                    A simple and reliable place for students
+                    to report lost belongings, submit found
+                    items and reconnect people with their
+                    valuables.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="lost.html" class="primary-btn">
+                        Report Lost Item <span>↗</span>
+                    </a>
+
+                    <a href="found.html" class="secondary-btn">
+                        I Found Something
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+                    <span>✓</span>
+                    Made for our college community
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="visual-circle circle-one"></div>
+                <div class="visual-circle circle-two"></div>
+
+                <div class="floating-card card-top">
+
+                    <div class="floating-icon green-icon">✓</div>
+
+                    <div>
+                        <strong>Item Found!</strong>
+                        <p>Ready to reunite</p>
+                    </div>
+
+                </div>
+
+                <div class="main-illustration">
+
+                    <div class="illustration-icon">🔎</div>
+
+                    <div class="illustration-line"></div>
+
+                    <h3>Find What Matters.</h3>
+
+                    <p>Every lost item deserves a second chance.</p>
+
+                    <div class="illustration-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="floating-card card-bottom">
+
+                    <div class="floating-icon blue-icon">↗</div>
+
+                    <div>
+                        <strong>Report an Item</strong>
+                        <p>It only takes a moment</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="quick-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">GET STARTED</span>
+                    <h2>How can we help you?</h2>
+                </div>
+
+                <p>
+                    Choose an option to get started.
+                </p>
+
+            </div>
+
+
+            <div class="action-grid">
+
+                <!-- LOST ITEM -->
+                <a href="lost.html" class="action-card lost-card">
+
+                    <div class="action-top">
+                        <div class="action-icon lost-icon">↗</div>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <span class="action-label">01 / LOST</span>
+
+                    <h3>I lost something</h3>
+
+                    <p>
+                        Report your missing belongings
+                        and help others identify them.
+                    </p>
+
+                    <div class="action-link">
+                        Create a lost report <span>→</span>
+                    </div>
+
+                </a>
+
+
+                <!-- FOUND ITEM -->
+                <a href="found.html" class="action-card found-card">
+
+                    <div class="action-top">
+                        <div class="action-icon found-icon">✓</div>
+                        <span class="card-arrow">↗</span>
+                    </div>
+
+                    <span class="action-label">02 / FOUND</span>
+
+                    <h3>I found something</h3>
+
+                    <p>
+                        Found an item on campus?
+                        Help return it to its owner.
+                    </p>
+
+                    <div class="action-link">
+                        Submit a found item <span>→</span>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH SECTION -->
+        <section class="search-section">
+
+            <div class="search-content">
+
+                <div class="search-icon">⌕</div>
+
+                <div class="search-text">
+                    <h2>Looking for something?</h2>
+                    <p>
+                        Search for an item reported by
+                        another student.
+                    </p>
+                </div>
+
+            </div>
+
+            <form action="search.php" method="GET" class="search-form">
+
+                <input
+                    type="search"
+                    name="q"
+                    placeholder="Try 'ID card', 'wallet', 'books'..."
+                    aria-label="Search for lost or found items"
+                    required
+                >
+
+                <button type="submit">
+                    Search Items <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RECENT ITEMS -->
+        <section class="recent-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">COMMUNITY UPDATES</span>
+                    <h2>Recently reported items</h2>
+                </div>
+
+                <a href="search.php" class="view-all">
+                    View all <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="recent-grid">
+
+                <article class="recent-card">
+
+                    <div class="recent-card-icon lost-bg">
+                        📋
+                    </div>
+
+                    <div class="recent-card-content">
+
+                        <span class="status-badge lost-status">
+                            LOST ITEM
+                        </span>
+
+                        <h3>Lost belongings</h3>
+
+                        <p>
+                            Missing items reported by
+                            college students will appear here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="recent-card">
+
+                    <div class="recent-card-icon found-bg">
+                        📦
+                    </div>
+
+                    <div class="recent-card-content">
+
+                        <span class="status-badge found-status">
+                            FOUND ITEM
+                        </span>
+
+                        <h3>Found belongings</h3>
+
+                        <p>
+                            Items found around the campus
+                            will be listed here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="empty-note">
+                <span>ⓘ</span>
+                Live item listings will appear here once
+                the reporting system is connected.
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="steps-section">
+
+            <div class="steps-heading">
+                <span class="section-label">SIMPLE PROCESS</span>
+                <h2>Three steps. One happy reunion.</h2>
+            </div>
+
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <span class="step-number">01</span>
+
+                    <div class="step-icon">📝</div>
+
+                    <h3>Submit a report</h3>
+
+                    <p>
+                        Share the item details, photo,
+                        date and location.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">02</span>
+
+                    <div class="step-icon">🔍</div>
+
+                    <h3>Find a match</h3>
+
+                    <p>
+                        Browse reports and identify
+                        the item you are looking for.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">03</span>
+
+                    <div class="step-icon">🤝</div>
+
+                    <h3>Return the item</h3>
+
+                    <p>
+                        Verify ownership and arrange
+                        a safe handover.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">⌕</div>
+
+                <div>
+                    <h2>LOST & FOUND CELL</h2>
+                    <p>Morigaon College (Autonomous)</p>
+                </div>
+
+            </div>
+
+            <p class="footer-message">
+                Helping our college community
+                find what matters.
+            </p>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Lost & Found Cell</p>
+
+            <p>Built for the Morigaon College community.</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

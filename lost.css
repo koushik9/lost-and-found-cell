@@ -1,0 +1,730 @@
+/* =====================================
+   LOST AND FOUND CELL
+   LOST ITEM PAGE
+   MORIGAON COLLEGE (AUTONOMOUS)
+===================================== */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #102b46;
+    --navy-dark: #091e33;
+    --blue: #2475d0;
+    --red: #e65361;
+    --red-dark: #cc3445;
+    --red-light: #fff0f1;
+    --white: #ffffff;
+    --background: #f5f7fb;
+    --text: #172b43;
+    --muted: #728096;
+    --border: #e3eaf2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea,
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    min-height: 80px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--navy);
+    color: white;
+    font-size: 35px;
+}
+
+.brand h1 {
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.4;
+}
+
+.brand h1 span {
+    color: var(--red);
+}
+
+.brand p {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.back-link {
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.2s ease;
+}
+
+.back-link:hover {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+/* =====================================
+   PAGE INTRO
+===================================== */
+
+.page-intro {
+    padding: 42px 20px 48px;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            #e6536135,
+            transparent 35%
+        ),
+        linear-gradient(
+            125deg,
+            #091e33,
+            #102b46 65%,
+            #174e79
+        );
+}
+
+.intro-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: var(--red);
+    box-shadow: 0 10px 30px #00000020;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ffc3c9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.page-intro h2 {
+    font-size: clamp(29px, 5vw, 42px);
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.page-intro > p {
+    max-width: 480px;
+    margin: 14px auto 0;
+    color: #c6d8e9;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 35px 18px 55px;
+}
+
+/* =====================================
+   FORM HEADING
+===================================== */
+
+.form-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 23px;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--red-dark);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.form-heading h2 {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.required-note {
+    padding-bottom: 4px;
+    color: var(--muted);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.lost-form {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0 12px 40px #102b4608;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.form-group label span {
+    color: var(--red);
+}
+
+.form-group input:not([type="file"]),
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 14px;
+    outline: none;
+    border: 1px solid #dce5ef;
+    border-radius: 11px;
+    background: #fbfcfe;
+    color: var(--text);
+    font-size: 12px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa7b7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px #e6536115;
+    background: white;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    min-height: 115px;
+    resize: vertical;
+    line-height: 1.8;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   PHOTO UPLOAD
+===================================== */
+
+.upload-box {
+    padding: 25px 15px;
+    text-align: center;
+    border: 1.5px dashed #d8aeb4;
+    border-radius: 15px;
+    background: #fff9fa;
+    transition: 0.2s ease;
+}
+
+.upload-box:focus-within {
+    border-color: var(--red);
+    background: #fff3f4;
+}
+
+.upload-icon {
+    width: 57px;
+    height: 57px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    background: var(--red-light);
+    font-size: 27px;
+}
+
+.upload-box h3 {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.upload-box p {
+    margin-top: 6px;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.upload-box input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    color: var(--text);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.upload-box input[type="file"]::file-selector-button {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #102b46,
+        #2475d0
+    );
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.upload-box input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(
+        135deg,
+        #cc3445,
+        #e65361
+    );
+}
+
+.upload-box small {
+    display: block;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* =====================================
+   FORM DIVIDER
+===================================== */
+
+.form-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 31px 0 25px;
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.form-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* =====================================
+   PRIVACY NOTE
+===================================== */
+
+.privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid #dce5f0;
+    border-radius: 12px;
+    background: #f5f8fc;
+}
+
+.privacy-note > span {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.privacy-note p {
+    color: #52677f;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+.submit-btn {
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        110deg,
+        #d83f50,
+        #e65361
+    );
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 8px 18px #e6536120;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submit-btn span {
+    font-size: 19px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px #e6536130;
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+.cancel-link {
+    display: block;
+    width: fit-content;
+    margin: 17px auto 0;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cancel-link:hover {
+    color: var(--blue);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    padding: 30px 18px;
+    text-align: center;
+    background: var(--navy-dark);
+    color: white;
+}
+
+.footer h3 {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+}
+
+.footer > p {
+    margin-top: 8px;
+    color: #b4c6d9;
+    font-size: 11px;
+}
+
+.footer .footer-note {
+    margin-top: 12px;
+    color: #ffc3c9;
+    font-size: 11px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 600px) {
+
+    .container {
+        padding-top: 45px;
+    }
+
+    .lost-form {
+        padding: 35px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input:not([type="file"]),
+    .form-group select,
+    .form-group textarea {
+        font-size: 13px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        min-height: 70px;
+        padding: 12px 14px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        font-size: 30px;
+    }
+
+    .brand h1 {
+        font-size: 14px;
+    }
+
+    .brand p {
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+
+    .back-link {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .page-intro {
+        padding: 35px 18px 39px;
+    }
+
+    .intro-icon {
+        width: 57px;
+        height: 57px;
+        border-radius: 17px;
+        font-size: 30px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .page-intro h2 {
+        font-size: 30px;
+    }
+
+    .page-intro > p {
+        font-size: 11px;
+    }
+
+    .container {
+        padding: 27px 13px 40px;
+    }
+
+    .form-heading h2 {
+        font-size: 22px;
+    }
+
+    .required-note {
+        font-size: 9px;
+    }
+
+    .lost-form {
+        padding: 21px 16px;
+        border-radius: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 21px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input:not([type="file"]),
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .upload-box {
+        padding: 21px 11px;
+    }
+
+    .upload-box input[type="file"] {
+        font-size: 10px;
+    }
+
+    .form-divider {
+        margin: 27px 0 22px;
+        font-size: 9px;
+    }
+
+    .privacy-note {
+        padding: 13px;
+        gap: 9px;
+    }
+
+    .privacy-note p {
+        font-size: 10px;
+    }
+
+    .submit-btn {
+        min-height: 49px;
+        font-size: 12px;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 340px) {
+
+    .header {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+
+    .brand h1 {
+        font-size: 12px;
+    }
+
+    .brand p {
+        font-size: 7px;
+    }
+
+    .back-link {
+        padding: 8px;
+        font-size: 9px;
+    }
+
+    .page-intro h2 {
+        font-size: 27px;
+    }
+
+    .container {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+
+    .lost-form {
+        padding: 17px 12px;
+    }
+
+    .required-note {
+        white-space: normal;
+        text-align: right;
+    }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="theme-color" content="#102b46">
 
-    <title>Report Lost Item | Lost & Found Cell</title>
+    <title>Report Lost Item | Lost &amp; Found Cell</title>
 
     <link rel="stylesheet" href="lost.css">
 </head>
@@ -18,14 +17,12 @@
     <header class="header">
 
         <a href="index.html" class="brand">
-
             <div class="brand-icon">⌕</div>
 
             <div>
-                <h1>LOST <span>&</span> FOUND</h1>
+                <h1>LOST <span>&amp;</span> FOUND</h1>
                 <p>MORIGAON COLLEGE</p>
             </div>
-
         </a>
 
         <a href="index.html" class="back-link">
@@ -75,8 +72,13 @@
         </div>
 
 
-        
-        <form id="lostForm" class="lost-form">
+        <!-- LOST ITEM FORM -->
+        <form
+            id="lostForm"
+            class="lost-form"
+            action="https://formspree.io/f/xnpjezrw"
+            method="POST"
+        >
 
             <!-- ITEM NAME -->
             <div class="form-group">
@@ -111,27 +113,15 @@
                 >
 
                     <option value="">Select a category</option>
-
                     <option value="ID Card">ID Card</option>
-
                     <option value="Wallet">Wallet</option>
-
                     <option value="Mobile Phone">Mobile Phone</option>
-
-                    <option value="Books and Notes">
-                        Books and Notes
-                    </option>
-
+                    <option value="Books and Notes">Books and Notes</option>
                     <option value="Bag">Bag</option>
-
                     <option value="Keys">Keys</option>
-
                     <option value="Electronics">Electronics</option>
-
                     <option value="Documents">Documents</option>
-
                     <option value="Clothing">Clothing</option>
-
                     <option value="Other">Other</option>
 
                 </select>
@@ -139,7 +129,7 @@
             </div>
 
 
-            <!-- PHOTO -->
+            <!-- ITEM PHOTO -->
             <div class="form-group">
 
                 <label for="itemPhoto">
@@ -166,6 +156,7 @@
 
                     <small>
                         JPG, PNG or WEBP. Maximum 5 MB.
+                        Photo upload depends on your Formspree plan.
                     </small>
 
                 </div>
@@ -204,27 +195,13 @@
                 >
 
                     <option value="">Select a location</option>
-
                     <option value="Classroom">Classroom</option>
-
                     <option value="Library">Library</option>
-
-                    <option value="College Canteen">
-                        College Canteen
-                    </option>
-
-                    <option value="College Ground">
-                        College Ground
-                    </option>
-
-                    <option value="College Office">
-                        College Office
-                    </option>
-
+                    <option value="College Canteen">College Canteen</option>
+                    <option value="College Ground">College Ground</option>
+                    <option value="College Office">College Office</option>
                     <option value="Parking Area">Parking Area</option>
-
                     <option value="College Gate">College Gate</option>
-
                     <option value="Other">Other Location</option>
 
                 </select>
@@ -256,6 +233,7 @@
             </div>
 
 
+            <!-- STUDENT NAME -->
             <div class="form-group">
 
                 <label for="studentName">
@@ -275,6 +253,7 @@
             </div>
 
 
+            <!-- PHONE NUMBER -->
             <div class="form-group">
 
                 <label for="phone">
@@ -301,7 +280,7 @@
             </div>
 
 
-            <!-- PRIVACY -->
+            <!-- PRIVACY NOTICE -->
             <div class="privacy-note">
 
                 <span>🔒</span>
@@ -315,19 +294,18 @@
             </div>
 
 
-            <!-- SUBMIT -->
+            <!-- SUBMIT BUTTON -->
             <button type="submit" class="submit-btn">
-
                 Submit Lost Report <span>→</span>
-
             </button>
 
 
+            <!-- CANCEL -->
             <a href="index.html" class="cancel-link">
                 Cancel and Return Home
             </a>
 
-        </>
+        </form>
 
     </main>
 
@@ -335,7 +313,7 @@
     <!-- FOOTER -->
     <footer class="footer">
 
-        <h3>LOST & FOUND CELL</h3>
+        <h3>LOST &amp; FOUND CELL</h3>
 
         <p>
             Morigaon College (Autonomous), Assam
@@ -347,7 +325,11 @@
         </p>
 
     </footer>
-<script type="module" src="lost.js"></script>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="lost.js"></script>
+
 </body>
 
-</html>
+                </html>

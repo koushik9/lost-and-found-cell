@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#102b46">
 
-    <title>Search Items | Lost & Found Cell</title>
+    <title>View Reported Items | Lost &amp; Found Cell</title>
 
-    <link rel="stylesheet" href="./search.css">
+    <link rel="stylesheet" href="search.css">
 </head>
 
 <body>
@@ -17,14 +17,12 @@
     <header class="header">
 
         <a href="index.html" class="brand">
-
             <div class="brand-icon">⌕</div>
 
             <div>
                 <h1>LOST <span>&amp;</span> FOUND</h1>
                 <p>MORIGAON COLLEGE</p>
             </div>
-
         </a>
 
         <a href="index.html" class="back-link">
@@ -33,153 +31,149 @@
 
     </header>
 
+
     <!-- HERO -->
     <section class="search-hero">
 
-        <span class="eyebrow">ITEM DISCOVERY</span>
+        <span class="eyebrow">COLLEGE LOST &amp; FOUND CELL</span>
 
-        <h2>Find Your Missing Item</h2>
+        <h2>Reported Items</h2>
 
         <p>
-            Search through reported lost and found items
-            from our college community.
+            Browse items reported lost or found
+            around Morigaon College.
         </p>
 
-        <form class="search-form" id="searchForm">
-
-            <span class="search-icon">⌕</span>
-
-            <input
-                type="search"
-                id="itemName"
-                name="q"
-                placeholder="Search wallet, books, ID card..."
-                aria-label="Search items"
-            >
-
-            <button type="submit">Search</button>
-
-        </form>
-
     </section>
+
 
     <!-- MAIN CONTENT -->
     <main class="container">
 
-        <!-- FILTERS -->
-        <section class="filter-section">
+        <!-- ITEM FILTER BUTTONS -->
+        <section class="browse-section">
 
-            <div class="filter-heading">
-                <h2>Browse Items</h2>
+            <div class="section-heading">
+                <span class="section-label">BROWSE ITEMS</span>
+                <h2>What Are You Looking For?</h2>
 
                 <p>
-                    Find items by their category or status.
+                    Choose a category to view reported items.
                 </p>
             </div>
 
-            <form class="filter-form" id="filterForm">
+            <div class="browse-buttons">
 
-                <div class="filter-group">
-
-                    <label for="category">Category</label>
-
-                    <select id="category" name="category">
-
-                        <option value="">All Categories</option>
-                        <option value="ID Card">ID Card</option>
-                        <option value="Wallet">Wallet</option>
-                        <option value="Mobile Phone">Mobile Phone</option>
-                        <option value="Books and Notes">Books and Notes</option>
-                        <option value="Bag">Bag</option>
-                        <option value="Keys">Keys</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Documents">Documents</option>
-                        <option value="Clothing">Clothing</option>
-                        <option value="Other">Other</option>
-
-                    </select>
-
-                </div>
-
-                <div class="filter-group">
-
-                    <label for="status">Item Status</label>
-
-                    <select id="status" name="status">
-
-                        <option value="">All Items</option>
-                        <option value="lost">Lost Items</option>
-                        <option value="found">Found Items</option>
-                        <option value="returned">Returned Items</option>
-
-                    </select>
-
-                </div>
-
-                <button type="submit" class="filter-button">
-                    Apply Filters
+                <button
+                    type="button"
+                    class="browse-button active"
+                    data-filter="all"
+                >
+                    📋 All Items
                 </button>
 
-            </form>
+                <button
+                    type="button"
+                    class="browse-button lost-tab"
+                    data-filter="lost"
+                >
+                    🔴 View Lost Items
+                </button>
+
+                <button
+                    type="button"
+                    class="browse-button found-tab"
+                    data-filter="found"
+                >
+                    🟢 View Found Items
+                </button>
+
+            </div>
 
         </section>
 
-        <!-- RESULTS -->
+
+        <!-- REPORT ITEM ACTIONS -->
+        <section class="report-actions">
+
+            <div>
+                <h2>Have You Lost Something?</h2>
+
+                <p>
+                    Submit a report to help others identify your item.
+                </p>
+            </div>
+
+            <div class="report-buttons">
+
+                <a href="lost.html" class="report-button lost-button">
+                    Report Lost Item
+                </a>
+
+                <a href="found.html" class="report-button found-button">
+                    Report Found Item
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ITEMS LIST -->
         <section class="results-section">
 
             <div class="results-heading">
 
                 <div>
-                    <span class="section-label">SEARCH RESULTS</span>
-                    <h2>Reported Items</h2>
+                    <span class="section-label">COMMUNITY REPORTS</span>
+                    <h2 id="listTitle">All Reported Items</h2>
                 </div>
 
                 <span class="results-count" id="resultsCount">
-                    Items
+                    0 Items
                 </span>
 
             </div>
 
+
+            <!--
+                Actual reports will appear here after
+                the database is connected.
+            -->
             <div id="results" class="empty-state">
 
-                <div class="empty-icon">🔎</div>
+                <div class="empty-icon">📦</div>
 
-                <h3>No Items to Display Yet</h3>
+                <h3>No Reports Loaded Yet</h3>
 
                 <p>
-                    Once students submit lost or found reports,
-                    matching items will appear here.
+                    The item listing will appear here
+                    after the reporting database is connected.
                 </p>
 
             </div>
 
         </section>
 
-        <!-- QUICK ACTIONS -->
-        <section class="quick-actions">
 
-            <h2>Can't Find Your Item?</h2>
+        <!-- PRIVACY NOTICE -->
+        <section class="privacy-notice">
 
-            <p>
-                Submit a report so other students
-                can help you.
-            </p>
+            <span>🔒</span>
 
-            <div class="quick-buttons">
+            <div>
+                <h3>Protect Your Personal Information</h3>
 
-                <a href="lost.html" class="lost-button">
-                    Report Lost Item
-                </a>
-
-                <a href="found.html" class="found-button">
-                    Submit Found Item
-                </a>
-
+                <p>
+                    Personal phone numbers should not be displayed
+                    publicly without the owner's permission.
+                </p>
             </div>
 
         </section>
 
     </main>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -194,7 +188,42 @@
 
     </footer>
 
-    <script src="script.js"></script>
+
+    <!-- FILTER BUTTONS -->
+    <script>
+        const browseButtons = document.querySelectorAll(".browse-button");
+        const listTitle = document.getElementById("listTitle");
+        const results = document.getElementById("results");
+
+        browseButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                browseButtons.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+
+                if (filter === "lost") {
+                    listTitle.textContent = "Lost Items";
+                } else if (filter === "found") {
+                    listTitle.textContent = "Found Items";
+                } else {
+                    listTitle.textContent = "All Reported Items";
+                }
+
+                /*
+                  This only changes the selected view.
+                  Database connection is still required
+                  to load actual submitted reports.
+                */
+            });
+
+        });
+    </script>
 
 </body>
-</html>
+    </html>

@@ -1,11 +1,4 @@
-import {
-    db,
-    collection,
-    addDoc
-} from "firebase.js";
-
 const form = document.getElementById("lostForm");
-console.log("lost.js loaded successfully");
 
 if (form) {
     form.addEventListener("submit", async function (event) {
@@ -20,49 +13,26 @@ if (form) {
 
         const formData = new FormData(form);
 
-        const item = {
-            itemName: formData.get("item_name")?.trim() || "",
-            category: formData.get("category") || "",
-            lostDate: formData.get("lost_date") || "",
-            lostLocation: formData.get("lost_location")?.trim() || "",
-            description: formData.get("description")?.trim() || "",
-            studentName: formData.get("student_name")?.trim() || "",
-            phone: formData.get("phone")?.trim() || "",
-            status: "lost",
-            createdAt: new Date().toISOString()
-        };
-
-        if (
-            !item.itemName ||
-            !item.category ||
-            !item.lostDate ||
-            !item.lostLocation ||
-            !item.studentName ||
-            !item.phone
-        ) {
-            alert("Please fill in all required information");
-
-            if (submitButton) {
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit Report";
-            }
-
-            return;
-        }
+        formData.append("_subject", "New Lost Item Report - Morigaon College");
 
         try {
-            await addDoc(collection(db, "items"), item);
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
 
-            alert("Lost Item Report Submitted successfully!");
-            form.reset();
-
+            if (response.ok) {
+                alert("✅ Lost Item Report Submitted Successfully!");
+                form.reset();
+            } else {
+                alert("❌ Report not submitted. Try again.");
+            }
         } catch (error) {
-            console.error("Firebase error:", error);
-
-            alert(
-                "Report Not submitted Firebase Security Rules and Website Hosting check"
-            );
-
+            console.error("Formspree error:", error);
+            alert("Check Internet connection and try again.");
         } finally {
             if (submitButton) {
                 submitButton.disabled = false;

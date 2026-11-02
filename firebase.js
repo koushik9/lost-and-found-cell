@@ -16,7 +16,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "YOUR_EXISTING_API_KEY",
+    apiKey: "AIzaSyBYVpbNnYKdzy4Q5iNYatA-RQB9gRl4paA",
     authDomain: "lost-and-found-cell.firebaseapp.com",
     projectId: "lost-and-found-cell",
     storageBucket: "lost-and-found-cell.firebasestorage.app",

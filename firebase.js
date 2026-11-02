@@ -1,5 +1,6 @@
 // Firebase configuration
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
 import {
     getFirestore,
     collection,
@@ -9,8 +10,13 @@ import {
     orderBy
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+import {
+    getAuth,
+    signInAnonymously
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
 const firebaseConfig = {
-    apiKey: "AIzaSyC7qhnN7--MS3keWQ8RQ-mElS0UtcCpD_c",
+    apiKey: "YOUR_EXISTING_API_KEY",
     authDomain: "lost-and-found-cell.firebaseapp.com",
     projectId: "lost-and-found-cell",
     storageBucket: "lost-and-found-cell.firebasestorage.app",
@@ -19,10 +25,22 @@ const firebaseConfig = {
     measurementId: "G-3WH6Q1V1LT"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Connect Firestore Database
 const db = getFirestore(app);
 
-export { app, db, collection, addDoc, getDocs, query, orderBy };
+const auth = getAuth(app);
+
+const authReady = signInAnonymously(auth);
+
+export {
+    app,
+    db,
+    auth,
+    authReady,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy
+};
